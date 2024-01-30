@@ -27,8 +27,8 @@ export default async function fixPackage(
     };
   }
   pkg.repository = {
-    url: repoUrl,
     type: "git",
+    url: repoUrl,
   }
   pkg.author = {
     name: repoAuthor,
