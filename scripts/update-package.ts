@@ -13,6 +13,7 @@ export default async function fixPackage(
   const repoAuthor = getAuthorName();
   const repoEmail = getAuthorEmail();
   const repoUrl = getRepoUrl();
+  console.log(">>>", repoName, repoAuthor, repoEmail, repoUrl, getRepoOwner(repoUrl));
   const repoDetails = await getRepoDetails(getRepoOwner(repoUrl), repoName);
 
   const pkg = JSON.parse(packageJson);
@@ -105,6 +106,7 @@ export default async function fixPackage(
       const response = await myFetch(`https://api.github.com/repos/${owner}/${repo}`);
       const data: any = await response.json?.();
 
+      console.log(owner, repo);
       if (response.ok) {
         return {
           description: data.description || null,
@@ -121,3 +123,6 @@ export default async function fixPackage(
     }
   }
 }
+
+
+// github.com:jacklehamster/gl-texture-manager
