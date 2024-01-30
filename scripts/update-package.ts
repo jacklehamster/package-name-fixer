@@ -70,7 +70,7 @@ async function getRepoDetails(owner: string, repo: string) {
   }
 }
 
-export default async function fixPackage() {
+export default async function fixPackage(isTest?: boolean) {
   const file = Bun.file('package.json');
 
   const repoName = getRepoName();
@@ -100,5 +100,9 @@ export default async function fixPackage() {
   pkg.description = repoDetails?.description ?? "<fill in description>";
   pkg.homepage = repoDetails?.homepage ?? "<fill in homepage>";
 
-  await Bun.write(file, JSON.stringify(pkg, null, "  ") + "\n");
+  if (isTest) {
+    console.info("New package\n", pkg);
+  } else {
+    await Bun.write(file, JSON.stringify(pkg, null, "  ") + "\n");
+  }
 }

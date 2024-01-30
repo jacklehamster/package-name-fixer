@@ -5,7 +5,8 @@
     "node": ">=14.0.0"
   },
   "scripts": {
-    "start": "bun run index.ts"
+    "start": "bun run index.ts",
+    "test": "bun run index.ts -- test"
   },
   "include": [
     "scripts/**/*.ts"
@@ -17,7 +18,7 @@
     "typescript": "^5.0.0"
   },
   "repository": {
-    "url": "git+ssh://git@github.com/jacklehamster/package-name-fixer.git",
+    "url": "git@github.com:jacklehamster/package-name-fixer.git",
     "type": "git"
   },
   "author": {

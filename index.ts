@@ -1,3 +1,4 @@
 import fixPackage from "./scripts/update-package";
 
-fixPackage();
+const [_bun, _script, arg] = process.argv;
+fixPackage(arg === "test");
