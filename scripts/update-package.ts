@@ -39,7 +39,13 @@ export default async function fixPackage(
   if (!file) {
     return pkg;
   } else {
-    await Bun.write(file, JSON.stringify(pkg, null, "  ") + "\n");
+    const result = JSON.stringify(pkg, null, "  ") + "\n";
+    if (result !== packageJson) {
+      await Bun.write(file, result);
+      console.info("Package updated.");
+    } else {
+      console.info("Package not updated. No change needed.");
+    }
   }
 
 
