@@ -112,11 +112,11 @@ export default async function fixPackage(
           homepage: data.homepage || null,
         };
       } else {
-        console.error(`Failed to fetch repository details: ${data.message}`);
+        console.error(`Failed to fetch repository details for ${owner}/${repo}`, `${data.message}`);
         return null;
       }
     } catch (error: any) {
-      console.error('Error fetching repository details:' + error.message);
+      console.error(`Error fetching repository details for ${owner}/${repo}:`, error.message);
       return null;
     }
   }
