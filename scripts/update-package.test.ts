@@ -30,7 +30,7 @@ describe('fixPackage', () => {
     }));
 
     // Run the function with the mockPackageJson parameter and mockExecute function
-    const result = await fixPackage(mockPackageJson, mockExecute, mockFetch);
+    const result = await fixPackage("", mockPackageJson, mockExecute, mockFetch);
 
     // Update the expectations based on the behavior you expect
     expect(result).toEqual({
