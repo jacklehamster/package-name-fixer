@@ -49,8 +49,6 @@ export default async function fixPackage(
     }
   }
 
-
-
   function getRepoName() {
     try {
       // Get the remote URL of the origin repository
@@ -76,7 +74,6 @@ export default async function fixPackage(
   }
 
   function getAuthorName() {
-
     try {
       // Get the name and email of the author of the initial commit
       const authorName = execute('git log --format="%an" --reverse | head -n 1').toString().trim();

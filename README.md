@@ -12,15 +12,15 @@ $ bun start
 # Usage from another package
 
 Update `package.json`:
-```json
+```js
 {
-    ...
+  //...
   "scripts": {
-    ...
-    "fix-package-name": "npm explore package-name-fixer -- bun start '$(pwd)'",
+    //...
+    "fix-package-name": "npm explore package-name-fixer -- bun start \"$(pwd)\""
   },
   "devDependencies": {
-    ...
+    //...
     "package-name-fixer": "^1.0.6",
   }
 }
