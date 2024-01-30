@@ -1,13 +1,13 @@
 import { execSync } from 'child_process';
 
 export default async function fixPackage(
-  path: string = "",
+  path: string = ".",
   packageJson?: string,
   execute: ((command: string) => Buffer) = execSync,
   myFetch: (url: string) => Promise<Partial<Response>> = fetch) {
   let file;
   if (!packageJson) {
-    file = Bun.file(`${path}package.json`);
+    file = Bun.file(`${path}/package.json`);
     packageJson = await file.text();
   }
   const repoName = getRepoName();
