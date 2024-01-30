@@ -1,0 +1,34 @@
+{
+  "name": "package-name-fixer",
+  "scripts": {
+    "start": "bun run index.ts"
+  },
+  "include": [
+    "scripts/**/*.ts"
+  ],
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "repository": {
+    "url": "https://github.com/jacklehamster/package-name-fixer.git",
+    "type": "git"
+  },
+  "author": {
+    "name": "Jack Le Hamster",
+    "email": "jacklehamster@gmail.com"
+  },
+  "description": "Goes into package.json and update the name to match the Github repository. Also updates author, description. It's useful when a npm repo is build out of a template.",
+  "homepage": "<fill in homepage>",
+  "keywords": [
+    "bun",
+    "bunjs",
+    "typescript",
+    "package",
+    "name",
+    "package.json",
+    "github"
+  ]
+}
