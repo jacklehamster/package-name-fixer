@@ -1,5 +1,9 @@
 {
   "name": "package-name-fixer",
+  "version": "1.0.0",
+  "engines": {
+    "node": ">=14.0.0"
+  },
   "scripts": {
     "start": "bun run index.ts"
   },
@@ -13,7 +17,7 @@
     "typescript": "^5.0.0"
   },
   "repository": {
-    "url": "https://github.com/jacklehamster/package-name-fixer.git",
+    "url": "git@github.com:jacklehamster/package-name-fixer.git",
     "type": "git"
   },
   "author": {

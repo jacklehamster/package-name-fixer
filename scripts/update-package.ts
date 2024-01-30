@@ -80,9 +80,14 @@ export default async function fixPackage() {
   const repoDetails = await getRepoDetails(getRepoOwner(repoUrl), repoName);
 
   const pkg = JSON.parse(await file.text());
-  if (pkg.name !== repoName) {
+  if (pkg.name !== repoName || !pkg.version) {
     pkg.name = repoName;
     pkg.version = "1.0.0";
+  }
+  if (!pkg.engines) {
+    pkg.engines = {
+      node: ">=14.0.0",
+    };
   }
   pkg.repository = {
     url: repoUrl,
