@@ -21,7 +21,7 @@ Update `package.json`:
   },
   "devDependencies": {
     //...
-    "package-name-fixer": "^1.0.8",
+    "package-name-fixer": "^1.0.9",
   }
 }
 ```
