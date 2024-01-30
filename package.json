@@ -34,5 +34,8 @@
     "name",
     "package.json",
     "github"
-  ]
+  ],
+  "publishConfig": {
+    "access": "public"
+  }
 }
