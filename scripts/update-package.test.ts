@@ -26,6 +26,7 @@ describe('fixPackage', () => {
         description: 'Test repository',
         homepage: 'https://test-repo.com',
         owner: { id: 123 },
+        topics: ['test', 'repo'],
       }),
     }));
 
@@ -41,6 +42,7 @@ describe('fixPackage', () => {
       author: { name: 'Test Author', email: 'test.author@example.com' }, // Update with the expected author information
       description: 'Test repository', // Update with the expected description
       homepage: 'https://test-repo.com', // Update with the expected homepage
+      keywords: ['test', 'repo'], // Update with the expected topics
     });
 
     // You can also assert that the mockExecute function was called with the expected commands

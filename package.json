@@ -12,16 +12,16 @@
     "scripts/**/*.ts"
   ],
   "devDependencies": {
-    "@types/bun": "latest",
+    "@types/bun": "^1.1.17",
     "jest": "^29.7.0",
-    "ts-jest": "^29.1.2"
+    "ts-jest": "^29.2.5"
   },
   "peerDependencies": {
     "typescript": "^5.0.0"
   },
   "repository": {
-    "url": "git@github.com:jacklehamster/package-name-fixer.git",
-    "type": "git"
+    "type": "git",
+    "url": "https://github.com/jacklehamster/package-name-fixer.git"
   },
   "author": {
     "name": "Jack Le Hamster",

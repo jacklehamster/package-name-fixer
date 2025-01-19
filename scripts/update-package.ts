@@ -36,6 +36,7 @@ export default async function fixPackage(
   };
   pkg.description = repoDetails?.description ?? "<fill in description>";
   pkg.homepage = repoDetails?.homepage ?? "<fill in homepage>";
+  pkg.keywords = repoDetails?.topics ?? [];
 
   if (!file) {
     return pkg;
@@ -108,6 +109,7 @@ export default async function fixPackage(
           description: data.description || null,
           owner: data.owner ? { id: data.owner.id } : null,
           homepage: data.homepage || null,
+          topics: data.topics || [],
         };
       } else {
         console.error(`Failed to fetch repository details for ${owner}/${repo}`, `${data.message}`);
