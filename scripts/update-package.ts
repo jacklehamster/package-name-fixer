@@ -34,8 +34,8 @@ export default async function fixPackage(
     name: repoAuthor,
     email: repoEmail,
   };
-  pkg.description = repoDetails?.description ?? "<fill in description>";
-  pkg.homepage = repoDetails?.homepage ?? "<fill in homepage>";
+  pkg.description = repoDetails?.description ?? undefined;
+  pkg.homepage = repoDetails?.homepage ?? undefined;
   pkg.keywords = repoDetails?.topics ?? [];
 
   if (!file) {

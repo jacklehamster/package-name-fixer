@@ -28,15 +28,11 @@
     "email": "jacklehamster@gmail.com"
   },
   "description": "Goes into package.json and update the name to match the Github repository. Also updates author, description. It's useful when a npm repo is build out of a template.",
-  "homepage": "<fill in homepage>",
   "keywords": [
     "bun",
-    "bunjs",
-    "typescript",
+    "npm",
     "package",
-    "name",
-    "package.json",
-    "github"
+    "packagejson"
   ],
   "publishConfig": {
     "access": "public"
